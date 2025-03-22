@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Hero from "./Hero";
+import Studio from "./Studio";
 
 
 export default function HomePage() {
@@ -7,6 +8,7 @@ export default function HomePage() {
         <div>
             <Header />
             <Hero />
+            <Studio />
         </div>
     )
 }
