@@ -28,7 +28,7 @@ export default function Avatar({ img, bg, size }) {
                     backgroundColor: bg.value,
                 }}
             >
-                {!isNull(img.value) ? <img src={img.value} className="w-full h-full" /> : null}
+                {!isNull(img.value) ? <img ref={img.ref} src={img.value} className="w-full h-full" /> : null}
             </div>
         </label>
     )
