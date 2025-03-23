@@ -4,7 +4,7 @@ import Preview from "./Preview";
 import PreviewHeader from "./Preview/PreviewHeader";
 import { aspectRatios } from "@/app/db/globals";
 import StartRecording from "./StartRecording";
-import { isNull } from "@/app/helpers/utils";
+import { isNull } from "@/helpers/utils";
 
 
 export default function Studio() {

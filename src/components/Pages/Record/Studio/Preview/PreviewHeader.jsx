@@ -1,5 +1,5 @@
 import { aspectRatios } from "@/app/db/globals";
-import { isNull } from "@/app/helpers/utils";
+import { isNull } from "@/helpers/utils";
 import ColorPicker from "@/components/Shared/ColorPicker";
 
 export default function PreviewHeader({

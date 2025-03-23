@@ -1,4 +1,4 @@
-import getEnv from "@/app/helpers/env";
+import getEnv from "@/helpers/env";
 import Link from "next/link";
 
 

@@ -1,4 +1,4 @@
-import { isNull } from "@/app/helpers/utils";
+import { isNull } from "@/helpers/utils";
 
 export default function Avatar({ img, bg, size }) {
 

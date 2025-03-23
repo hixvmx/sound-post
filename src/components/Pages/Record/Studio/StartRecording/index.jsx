@@ -1,6 +1,6 @@
 "use client";
 import { aspectRatios } from "@/app/db/globals";
-import { convertSecondsToTime } from "@/app/helpers/utils";
+import { convertSecondsToTime } from "@/helpers/utils";
 import { useRef, useState } from "react";
 
 export default function StartRecording({
@@ -153,7 +153,7 @@ export default function StartRecording({
                             className="mx-auto" style={{ width: `${videoWidth / 3}px`, height: `${videoHeight / 3}px` }}
                         />
                     </div>
-                    <button onClick={resetAllStates} className="mt-2 w-fit py-2.5 px-5 bg-blue-600 text-white rounded">
+                    <button onClick={resetAllStates} className="mt-4 w-fit py-2.5 px-5 bg-blue-600 text-white rounded">
                         Restart
                     </button>
                 </>

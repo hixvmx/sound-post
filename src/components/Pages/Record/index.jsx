@@ -1,12 +1,11 @@
 import Header from "@/components/Header/Header";
-import Hero from "./Hero";
+import Studio from "./Studio";
 
-
-export default function HomePage() {
+export default function Record() {
     return (
         <div>
             <Header />
-            <Hero />
+            <Studio />
         </div>
-    )
+    );
 }
