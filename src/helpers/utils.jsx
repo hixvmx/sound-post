@@ -1,3 +1,4 @@
+import getEnv from "./env";
 
 // Checks if an object is null or empty.
 export const isObjNull = (obj) => {
@@ -13,8 +14,13 @@ export const isNull = (value) => {
 };
 
 // Convert seconds into a MM:SS  
-export const convertSecondsToTime = (seconds) => {  
-    const minutes = Math.floor(seconds / 60).toString().padStart(2, "0");  
-    const secs = (seconds % 60).toString().padStart(2, "0");  
-    return `${minutes}:${secs}`;  
+export const convertSecondsToTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60).toString().padStart(2, "0");
+    const secs = (seconds % 60).toString().padStart(2, "0");
+    return `${minutes}:${secs}`;
+};
+
+// Generate a unique video filename  
+export const generateVideoFilename = (extension = "") => {
+    return getEnv('appName') + '_' + Date.now() + extension;
 };

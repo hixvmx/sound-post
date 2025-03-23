@@ -1,6 +1,6 @@
 "use client";
 import { aspectRatios } from "@/app/db/globals";
-import { convertSecondsToTime } from "@/helpers/utils";
+import { convertSecondsToTime, generateVideoFilename, isNull } from "@/helpers/utils";
 import { useRef, useState } from "react";
 
 export default function StartRecording({
@@ -81,7 +81,7 @@ export default function StartRecording({
             const combinedStream = new MediaStream([...videoStream.getVideoTracks(), ...audioStream.getAudioTracks()]);
 
             mediaRecorderRef.current = new MediaRecorder(combinedStream, {
-                mimeType: "video/webm", // You can try 'video/mp4' if supported
+                mimeType: "video/webm", // 'video/mp4'
                 videoBitsPerSecond: 2500000,
             });
 
@@ -121,6 +121,16 @@ export default function StartRecording({
         setRecordTime(0);
     }
 
+    // Download the recorded video  
+    const downloadTheVideo = () => {
+        const videoName = generateVideoFilename('.webm');
+        const a = document.createElement('a');
+        a.href = videoUrl;
+        a.download = videoName;
+        a.click();
+        a.remove();
+    }
+
     // Get the video width/height by 'selectedResolution'
     const { width: videoWidth, height: videoHeight } = aspectRatios[selectedResolution];
 
@@ -128,7 +138,7 @@ export default function StartRecording({
         <div className="flex flex-col">
             <canvas ref={canvasRef} className="hidden" />
 
-            {!videoUrl ? (
+            {isNull(videoUrl) ? (
                 <div className="mt-4 flex items-centr gap-2">
                     {!isRecording ? (
                         <button onClick={startRecording} className="w-fit py-2.5 px-5 bg-green-600 text-white rounded mr-2">
@@ -153,9 +163,14 @@ export default function StartRecording({
                             className="mx-auto" style={{ width: `${videoWidth / 3}px`, height: `${videoHeight / 3}px` }}
                         />
                     </div>
-                    <button onClick={resetAllStates} className="mt-4 w-fit py-2.5 px-5 bg-blue-600 text-white rounded">
-                        Restart
-                    </button>
+                    <div className="mt-4 flex items-center gap-2">
+                        <button onClick={downloadTheVideo} className="py-2.5 px-5 bg-blue-600 text-white rounded">
+                            Download
+                        </button>
+                        <button onClick={resetAllStates} className="py-2 px-3 hover:bg-bg-3 text-red-400 rounded transition-colors duration-200">
+                            Restart
+                        </button>
+                    </div>
                 </>
             )}
         </div>
