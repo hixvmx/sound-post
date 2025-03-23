@@ -27,7 +27,7 @@ export default function Studio() {
     return (
         <section id="record">
             <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center border-t border-border-1/50 mb-80 pt-20">
-                <div className="flex flex-col w-full max-w-[640px] mx-auto">
+                <div className="flex flex-col w-full max-w-[640px] mx-auto px-2">
                     <PreviewHeader
                         videoBg={{ value: videoBg, change: setVideoBg }}
                         avatarBg={{ value: avatarBg, change: setAvatarBg }}

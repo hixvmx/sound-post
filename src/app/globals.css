@@ -82,39 +82,129 @@
 }
 
 @layer utilities {
-    .textHeader-3xl { font: var(--typography-header-3xl-bold) }
-    .textHeader-2xl { font: var(--typography-header-2xl-bold) }
-    .textHeader-xl { font: var(--typography-header-xl-bold) }
-    .textHeader-l { font: var(--typography-header-l-semibold) }
-    .textHeader-m { font: var(--typography-header-m-semibold) }
-    .textHeader-s { font: var(--typography-header-s-semibold) }
-    .textHeader-xs { font: var(--typography-header-xs-semibold) }
+    .textHeader-3xl {
+        font: var(--typography-header-3xl-bold)
+    }
 
-    .textBody-l1 { font: var(--typography-body-l-semibold) }
-    .textBody-l2 { font: var(--typography-body-l-medium) }
-    .textBody-l3 { font: var(--typography-body-l-regular) }
-    .textBody-ml1 { font: var(--typography-body-ml-semibold) }
-    .textBody-ml2 { font: var(--typography-body-ml-medium) }
-    .textBody-ml3 { font: var(--typography-body-ml-regular) }
-    .textBody-m1 { font: var(--typography-body-m-semibold) }
-    .textBody-m2 { font: var(--typography-body-m-medium) }
-    .textBody-m3 { font: var(--typography-body-m-regular) }
-    .textBody-s1 { font: var(--typography-body-s-semibold) }
-    .textBody-s2 { font: var(--typography-body-s-medium) }
-    .textBody-s3 { font: var(--typography-body-s-regular) }
-    .textBody-xs1 { font: var(--typography-body-xs-semibold) }
-    .textBody-xs2 { font: var(--typography-body-xs-medium) }
-    .textBody-xs3 { font: var(--typography-body-xs-regular) }
-    .textBody-2xs1 { font: var(--typography-body-2xs-semibold) }
-    .textBody-2xs2 { font: var(--typography-body-2xs-medium) }
-    .textBody-2xs3 { font: var(--typography-body-2xs-regular) }
+    .textHeader-2xl {
+        font: var(--typography-header-2xl-bold)
+    }
 
-    .textLink-l { font: var(--typography-link-l-medium) }
-    .textLink-ml { font: var(--typography-link-ml-medium) }
-    .textLink-m { font: var(--typography-link-m-medium) }
-    .textLink-s { font: var(--typography-link-s-medium) }
-    .textLink-xs { font: var(--typography-link-xs-medium) }
-    .textLink-2xs { font: var(--typography-link-2xs-medium) }
+    .textHeader-xl {
+        font: var(--typography-header-xl-bold)
+    }
+
+    .textHeader-l {
+        font: var(--typography-header-l-semibold)
+    }
+
+    .textHeader-m {
+        font: var(--typography-header-m-semibold)
+    }
+
+    .textHeader-s {
+        font: var(--typography-header-s-semibold)
+    }
+
+    .textHeader-xs {
+        font: var(--typography-header-xs-semibold)
+    }
+
+    .textBody-l1 {
+        font: var(--typography-body-l-semibold)
+    }
+
+    .textBody-l2 {
+        font: var(--typography-body-l-medium)
+    }
+
+    .textBody-l3 {
+        font: var(--typography-body-l-regular)
+    }
+
+    .textBody-ml1 {
+        font: var(--typography-body-ml-semibold)
+    }
+
+    .textBody-ml2 {
+        font: var(--typography-body-ml-medium)
+    }
+
+    .textBody-ml3 {
+        font: var(--typography-body-ml-regular)
+    }
+
+    .textBody-m1 {
+        font: var(--typography-body-m-semibold)
+    }
+
+    .textBody-m2 {
+        font: var(--typography-body-m-medium)
+    }
+
+    .textBody-m3 {
+        font: var(--typography-body-m-regular)
+    }
+
+    .textBody-s1 {
+        font: var(--typography-body-s-semibold)
+    }
+
+    .textBody-s2 {
+        font: var(--typography-body-s-medium)
+    }
+
+    .textBody-s3 {
+        font: var(--typography-body-s-regular)
+    }
+
+    .textBody-xs1 {
+        font: var(--typography-body-xs-semibold)
+    }
+
+    .textBody-xs2 {
+        font: var(--typography-body-xs-medium)
+    }
+
+    .textBody-xs3 {
+        font: var(--typography-body-xs-regular)
+    }
+
+    .textBody-2xs1 {
+        font: var(--typography-body-2xs-semibold)
+    }
+
+    .textBody-2xs2 {
+        font: var(--typography-body-2xs-medium)
+    }
+
+    .textBody-2xs3 {
+        font: var(--typography-body-2xs-regular)
+    }
+
+    .textLink-l {
+        font: var(--typography-link-l-medium)
+    }
+
+    .textLink-ml {
+        font: var(--typography-link-ml-medium)
+    }
+
+    .textLink-m {
+        font: var(--typography-link-m-medium)
+    }
+
+    .textLink-s {
+        font: var(--typography-link-s-medium)
+    }
+
+    .textLink-xs {
+        font: var(--typography-link-xs-medium)
+    }
+
+    .textLink-2xs {
+        font: var(--typography-link-2xs-medium)
+    }
 }
 
 * {
@@ -154,4 +244,9 @@ select {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+.noScrollBar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }

@@ -12,7 +12,7 @@ export default function Preview({
     const { w, h } = videoSize;
 
     return isHidden ? null : (
-        <div className="my-2 bg-bg-3">
+        <div className="my-2 bg-bg-3 overflow-x-auto noScrollBar">
             <div
                 className="flex items-center justify-center mx-auto"
                 style={{

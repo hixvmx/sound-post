@@ -24,7 +24,7 @@ export default function PreviewHeader({
     }
 
     return (
-        <div className="w-full flex items-center justify-between gap-2">
+        <div className="w-full flex items-center justify-between gap-2 overflow-x-auto">
             <div className="w-full flex items-center gap-2">
 
                 {/* Background Color */}
